@@ -1,4 +1,4 @@
-package rtv;
+package name;
 
 import java.util.HashSet;
 
@@ -8,13 +8,15 @@ import mindustry.game.Team;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
+import mindustry.payer.name*;
 
 public class RockTheVotePlugin extends Plugin {
 
     private static double ratio = 0.6;
     private HashSet<String> votes = new HashSet<>();
     private boolean enable = true;
-
+    
+    /*
     // register event handlers and create variables in the constructor
     public RockTheVotePlugin() {
         // un-vote on player leave
@@ -32,7 +34,7 @@ public class RockTheVotePlugin extends Plugin {
             this.votes.clear();
         });
     }
-
+    */
 
     //register commands that player can invoke in-game
     @Override
@@ -41,6 +43,12 @@ public class RockTheVotePlugin extends Plugin {
         //register a simple reply command
         handler.<Player>register("rtv", "[off]", "Rock the vote to change map", (args, player) -> {
             if (player.admin()){
+                player.Message("Te egy admin vagy"); 
+            }
+            else {
+            player.sendMessage("Sikerült");
+            }
+           /* if (player.admin()){
                 this.enable = args.length != 1 || !args[0].equals("off");
             }
             if (!this.enable) {
@@ -59,7 +67,7 @@ public class RockTheVotePlugin extends Plugin {
 
             this.votes.clear();
             Call.sendMessage("RTV: [green] vote passed, changing map.");
-            Events.fire(new GameOverEvent(Team.crux));
+            Events.fire(new GameOverEvent(Team.crux));*/
         });
     }
 }

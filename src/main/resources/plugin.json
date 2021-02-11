@@ -1,7 +1,7 @@
 {
-  "name": "RockTheVotePlugin",
-  "author": "mayli",
-  "main": "rtv.RockTheVotePlugin",
-  "description": "A plugin to change map by /rtv.",
-  "version": 112.1 
+  "name": "Plugin",
+  "author": "VajdaSimon",
+  "main": "p.Plugin",
+  "description": "My tester plugin.",
+  "version": 1.0 
 }
